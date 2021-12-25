@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: black;
+  color: aliceblue;
 }
 
-.App-link {
-  color: #61dafb;
+.admin-login {
+  min-height: 40vh;
+  margin: auto auto;
+  display: grid;
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.vendor-login {
+  min-height: 35vh;
+  margin: auto auto;
+  display: grid;
+  align-self: center;
+}
+
+.heroimage {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.options {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.login-option {
+  color: #3dbe29;
+  border-bottom: 2px solid #3dbe29;
+}
+
+.navitem {
+  padding: 10px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-content: center;
+}
+
+Link {
+  text-decoration: none;
+}
+
+.product-menu {
+  margin: 50px;
+}
+
+.product-data {
+  margin: 0px;
+}
+
+.login-form {
+  margin: 20px;
+}
+
+.heroimage1 {
+  width: 100%;
+  max-width: 200px;
+  margin: auto auto;
+}
+
+.admin-screen {
+  min-width: 100%;
+  width: 100%;
+  height: 100vh;
+}
+
+.admin-side-bar {
+  cursor: pointer;
+  max-width: 30vw;
+  min-height: 100vh;
+  height: 100%;
+  background-color: white;
+  padding-top: 20px;
+}
+
+.flex-adminbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.admin-row {
+  padding: 10px;
+}
+
+.admin-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.img-accept {
+  width: 50px;
+}
+
+.accept-img {
+  width: 50%;
+}
+
+.loading {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.vendor-product {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 772px) {
+  .admin-side-bar {
+    flex-wrap: wrap;
+    min-width: 100%;
+    min-height: 20vh;
+    max-height: 25px;
+    right: 0;
   }
 }
