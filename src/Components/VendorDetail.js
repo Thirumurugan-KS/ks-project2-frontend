@@ -24,13 +24,11 @@ export default function VendorDetail() {
         <div>
             <Row className='m-3 bg-success text-white '>
                <div className='admin-detail'>
-               <p>Welcome {vendorDetail.name}!!!</p>
-              
-              
+               <p>Name : {vendorDetail.name}!!!</p>
+               <p>Email : {vendorDetail.email}</p>
+               <p>District : {vendorDetail.district}</p>
               <Button className='bg-dark' onClick={handleClick}>Log out</Button>
                </div>
-                
-              
                 </Row>
         </div>
     )

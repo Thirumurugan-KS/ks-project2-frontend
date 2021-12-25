@@ -152,4 +152,9 @@ Link {
     overflow: scroll;
     margin: 0 auto;
   }
+
+  .admin-detail {
+    display: flex;
+    flex-direction: Column;
+  }
 }
