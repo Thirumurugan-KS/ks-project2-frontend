@@ -26,7 +26,8 @@ export default function AdminViewUser() {
         <div>
             { loading ? <ReactLoading color='black' type='cylon' className='loading'/> 
             : error ? <Row className="m-3"><Message variant="danger">Error occured</Message></Row>:
-             <Table striped bordered hover>
+             <div className="table-data">
+                 <Table striped bordered hover>
             <thead>
             <tr>
             <th>
@@ -63,7 +64,8 @@ export default function AdminViewUser() {
             )
         }) }
            
-        </Table> }
+        </Table>
+                 </div> }
             
         </div>
     )

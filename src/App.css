@@ -133,6 +133,11 @@ Link {
   margin: 0 auto;
 }
 
+.vendor-own {
+  height: 70vh;
+  overflow: scroll;
+}
+
 @media only screen and (max-width: 772px) {
   .admin-side-bar {
     flex-wrap: wrap;
@@ -140,5 +145,11 @@ Link {
     min-height: 20vh;
     max-height: 25px;
     right: 0;
+  }
+
+  .table-data {
+    width: 90vw;
+    overflow: scroll;
+    margin: 0 auto;
   }
 }

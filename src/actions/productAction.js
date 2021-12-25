@@ -58,6 +58,7 @@ export const productViewAcceptAction = () => async(dispatch,getState)=>{
 
         console.log(data)
 
+
     
             dispatch({
                 type : PRODUCT_ACCEPT_SUCCESS,
@@ -195,6 +196,8 @@ export const addProductAction = (value) => async(dispatch, getState)=>{
 
        
         dispatch(vendorProductAction())
+
+        dispatch(productViewAcceptAction())
 
         dispatch({
             type : UPLOAD_SUCCESS

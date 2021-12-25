@@ -66,7 +66,8 @@ export default function AdminAcceptProduct() {
             
             { loading ? <ReactLoading color='black' type='cylon' className='loading'/> 
             : error ? <Row className="m-3"><Message variant="danger">Error occured</Message></Row>
-            :<Table striped bordered hover>
+            : <div className='table-data'>
+                <Table striped bordered hover>
                 {console.log(productsLength)}
             <thead>
                 <tr>
@@ -109,11 +110,9 @@ export default function AdminAcceptProduct() {
                         </tr>
                          </tbody>
                     )
-                })}
-           
-    
-           
+                })}    
         </Table>
+                </div>
             }
 
 

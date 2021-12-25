@@ -43,7 +43,7 @@ export default function VendorProducts() {
     
 
     return (
-        <div>
+        <div className='vendor-own'>
             <Row className='m-3'>
                 <Col md={12}>
                 <h5>View Your Products :</h5>
