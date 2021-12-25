@@ -25,6 +25,7 @@ export const vendorLoginAction = (value) => async(dispatch)=>{
         
         const { data } = await axios.post("https://ksproject2-backend.herokuapp.com/api/vendor/signin",JSON.stringify(value),config)
 
+        localStorage.setItem('vendorDetail' , JSON.stringify(data))
     
             dispatch({
                 type : VENDOR_LOGIN_SUCCESS,
@@ -46,6 +47,7 @@ export const vendorLoginAction = (value) => async(dispatch)=>{
 
 
 export const vendorLogoutAction = () => async(dispatch)=>{
+    localStorage.removeItem('vendorDetail')
     dispatch({
         type : VENDOR_LOGOUT_SUCCESS
     })

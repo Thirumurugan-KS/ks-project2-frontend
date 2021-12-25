@@ -25,6 +25,8 @@ export const adminLoginAction = (value) => async(dispatch)=>{
         console.log(value)
     
         const { data } = await axios.post("https://ksproject2-backend.herokuapp.com/api/admin/signin",JSON.stringify(value),config)
+
+        localStorage.setItem('adminDetail' , JSON.stringify(data))
     
             dispatch({
                 loading : false,
@@ -47,6 +49,8 @@ export const adminLoginAction = (value) => async(dispatch)=>{
 
 
 export const adminLogoutAction = () => async(dispatch)=>{
+
+    localStorage.removeItem('adminDetail')
     dispatch({
         type : ADMIN_LOGOUT_SUCCESS
     })

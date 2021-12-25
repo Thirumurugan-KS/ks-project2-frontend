@@ -19,13 +19,15 @@ const reducer = combineReducers({
 
 })
 
+const adminLoginfromLocalStorage = localStorage.getItem('adminDetail') ? JSON.parse(localStorage.getItem('adminDetail')) : null
+const vendorLoginfromLocalStorage = localStorage.getItem('vendorDetail') ? JSON.parse(localStorage.getItem('vendorDetail')) : null
 const initialState = {
 
     adminUser : {
-        adminDetail : null
+        adminDetail : adminLoginfromLocalStorage
     },
     vendorUser : {
-        vendorDetail : null
+        vendorDetail : vendorLoginfromLocalStorage
     },
     products : {
         productsDetail : []
