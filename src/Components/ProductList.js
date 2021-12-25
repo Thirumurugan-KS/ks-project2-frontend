@@ -1,5 +1,5 @@
-import React , { useEffect} from 'react'
-import { Nav , Col, Row, Image, Alert } from 'react-bootstrap'
+import React , {useState, useEffect} from 'react'
+import { Nav , Col, Row, Image, Alert, Input } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -28,11 +28,14 @@ export default function ProductList() {
 
     const { loading , error , productsDetail } = products
 
-
+    const [search, setSearch] = useState("")
      
-
     return (
         <div>
+            <p>Enter the city name</p>
+            <input type='text' placeholder='search product based on city' value={search} onChange={ e=> setSearch(e.target.value)}/>
+            <br/>
+            <br/>
             { loading ? <ReactLoading type="cylon" className='loading' color='black'/> 
             : error ? <Message variant="danger">Error occured</Message> 
             : <div>
@@ -44,7 +47,7 @@ export default function ProductList() {
             </Row>
             { productsDetail.map(prod =>{
                 return(
-        <Row className='m-3' key={prod._id}>
+            ((prod.district).toLowerCase()).includes(search.toLowerCase()) && <Row className='m-3' key={prod._id}>
         <br/>
         <Col md={2} className="offset-md-2 text-center product-listing">
         <Image  className="heroimage1" src={prod.image.secure_url} fluid rounded/>
