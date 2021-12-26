@@ -18,15 +18,21 @@ export default function AdminScreen() {
 
 
     useEffect(() => {   
-        console.log(adminDetail)
+     navigateFun()
+     dispatch(productAction())
+       
+    },[adminDetail])
+
+    const navigateFun = () =>{
+       
+
         if(adminDetail===null){
 
             navigate("/login")
 
         }
-     dispatch(productAction())
-       
-    },[adminDetail])
+
+    }
 
 
     const products = useSelector(state => state.products)

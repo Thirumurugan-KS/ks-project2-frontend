@@ -24,20 +24,18 @@ export default function HomeScreen() {
 
     return (
         <div className='container-fluid'>
-            <Nav className="navitem">
+             <Nav className="navitem">
             <Nav.Item>
                 <Link to="/" style={{ textDecoration: 'none' , color : '#4DD637'}}><h5>Products</h5></Link>
             </Nav.Item>
             <Nav.Item>
-                <Link to="/login" style={{ textDecoration: 'none', color : 'white' }}>Login</Link>
+                <Link to="/login" style={{ textDecoration: 'none', color : 'white' }}>{window.location.pathname=='/' ? "Signin" : " "}</Link>
             </Nav.Item>
             </Nav>
             <div className='product-menu'>
             <br/>
                <ProductList/>
             </div>
-            
-            
             
         </div>
     )

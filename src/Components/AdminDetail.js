@@ -14,13 +14,33 @@ export default function AdminDetail() {
 
     const { adminDetail } = adminUser
 
+
+
+    useEffect(() => {  
+
+     navigateFun()
+       
+    },[adminUser])
+
+    const navigateFun = () =>{
+
+    
+
+        if(adminDetail==null){
+
+            navigate("/login")
+
+        }
+
+    }
+
     const handleClick = () =>{
         dispatch(adminLogoutAction())
         navigate("/login")
     }
 
     return (
-            <Row className='m-3 bg-success text-white '>
+           (adminDetail!==null) && <Row className='m-3 bg-success text-white '>
                <div className='admin-detail'>
                <p>Welcome {adminDetail.name}!!!</p>
               <Button className='bg-dark' onClick={handleClick}>Log out</Button>

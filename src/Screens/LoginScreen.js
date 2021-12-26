@@ -1,5 +1,5 @@
 import React, {useState , useEffect} from 'react'
-import { Row ,Col, Form, Button } from 'react-bootstrap'
+import { Row ,Col, Form, Button, Nav } from 'react-bootstrap'
 import { useDispatch , useSelector} from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { adminLoginAction } from '../actions/adminAction'
@@ -78,8 +78,8 @@ export default function LoginScreen() {
 
     return (
         <div className='container-fluid login-container'>
+            
             <Row className="login-form">
-           
             <Col md={3} sd={5} className='offset-md-3 text-center admin-login'>
             { initial ? " " : (loading1 || loading2) ? <ReactLoading type='cylon' className='loading'/>: error1 || error2 ? <Message variant="danger">Email or password is wrong</Message> : " "}
             <h3>Login</h3>

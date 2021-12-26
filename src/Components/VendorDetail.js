@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import { useDispatch , useSelector} from 'react-redux'
 import { Row , Col, Button} from 'react-bootstrap'
 import { vendorLogoutAction } from '../actions/vendorAction'
@@ -15,13 +15,23 @@ export default function VendorDetail() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
+    useEffect(() => {
+          
+        if(vendorDetail===null){
+
+            navigate("/login")
+
+        }
+       
+    }, [vendorUser])
+
 
     const handleClick = () =>{
         dispatch(vendorLogoutAction())
         navigate("/login")
     }
     return (
-        <div>
+        (vendorDetail!=null) && <div>
             <Row className='m-3 bg-success text-white '>
                <div className='admin-detail'>
                <p>Name : {vendorDetail.name}!!!</p>
